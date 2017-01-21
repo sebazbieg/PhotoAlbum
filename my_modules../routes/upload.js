@@ -18,11 +18,7 @@ router.get('/api/photos', function(req, res){
   var baseUrl = 'http://localhost:3000/static/';
   fs.readdir('images', function(err, images){
     if (!err) {
-      images = images
-        .filter(function(image){
-          return image !== '.gitkeep';
-        })
-    .map(function(image){
+      images = images.map(function(image){
         return {
           src: baseUrl + image
         }

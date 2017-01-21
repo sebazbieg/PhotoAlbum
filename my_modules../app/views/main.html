@@ -3,7 +3,6 @@
     <div class="col-sm-4" ng-repeat="photo in vm.photos track by photo.src">
       <img src="{{photo.src}}" style="max-width: 100%" />
     </div>
-    <br>
   </div>
 
   <form action="http://localhost:3000/api/photos" method="post" enctype="multipart/form-data">
