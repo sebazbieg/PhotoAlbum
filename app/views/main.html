@@ -1,9 +1,8 @@
 <div ng-controller="MainCtrl as vm">
   <div class="row">
     <div class="col-sm-4" ng-repeat="photo in vm.photos track by photo.src">
-      <img src="{{photo.src}}" style="max-width: 100%" />
+      <div style="background-image: url({{photo.src}}); height: 150px; background-size: cover; background-position: center; margin-bottom: 25px ">
     </div>
-    <br>
   </div>
 
   <form action="http://localhost:3000/api/photos" method="post" enctype="multipart/form-data">
